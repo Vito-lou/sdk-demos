@@ -1,0 +1,29 @@
+{
+  "name": "vite-sdk-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/my-sdk.umd.js",
+  "module": "./dist/my-sdk.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/my-sdk.es.js",
+      "require": "./dist/my-sdk.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1"
+  }
+}
